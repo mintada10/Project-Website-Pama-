@@ -31,18 +31,33 @@
                 <div class="card-body">
                   <form action="{{route('create')}}" method="post">
                   {{csrf_field()}}
+                  
                   <div class="form-group">
                       <label for="name">Name</label>
                       <input type="text" class="form-control" id="name" name="name" placeholder="กรอกข้อมูล">
-                      </div>
+                      @error('name')
+                      <span class="text-danger">{{$message}}</span>
+                      @enderror
+                  </div>
+
                   <div class="form-group">
                       <label for="password">Password</label>
                       <input type="text" class="form-control" id="password" name="password" placeholder="กรอกข้อมูล">
-                      </div>
-                    <div class="form-group">
+                      @error('password')
+                      <span class="text-danger">{{$message}}</span>
+                      @enderror
+                  </div>
+
+                  <div class="form-group">
                       <label for="email">Email</label>
-                      <input type="text" class="form-control" id="Email" name="email" placeholder="กรอกข้อมูล">                    
-                    </div>
+                      <input type="text" class="form-control" id="Email" name="email" placeholder="กรอกข้อมูล">      
+                      @error('email')
+                      <span class="text-danger">{{$message}}</span>
+                      @enderror              
+                  </div>
+
+
+
                     <div class="form-group">
                     </div>
                    

@@ -38,20 +38,29 @@
                         <th>ชื่อ</th>
                         <th>รหัสผ่าน</th>
                         <th>Email</th>
+                        <th>created_at</th>
+                        <th>updated_at</th>
                         <th>แก้ไข</th>
                         <th>ลบ</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    
-                      <tr>
-                        <td><a href="#">1</a></td>
-                        <td>Udin Cilok</td>
-                        <td>B123456r</td>
-                        <td>pama@gmail.com</td>
-                        <td><a href="{{route('editadmin')}}" class="btn  btn-warning">แก้ไข</a></td>
+                   </tr>
+              </thead>
+              <tbody>
+                @foreach ($admin as $showadmin)
+                    <tr>
+
+                        <td scope="row">{{$showadmin->id_admin }}</td>
+                        <td>{{$showadmin->name}}</td>
+                        <td>{{$showadmin->password}}</td>
+                        <td>{{$showadmin->email}}</td>
+                        <td>{{$showadmin->created_at}}</td>
+                        <td>{{$showadmin->updated_at}}</td>
+
+                        <td><a href="{{url('admin/admin/edit/'.$showadmin->id_admin)}}" class="btn  btn-warning">แก้ไข</a></td>
                         <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
+
+                   </tr>
+                @endforeach
+                  
                     </tbody>
                   </table>
                 </div>

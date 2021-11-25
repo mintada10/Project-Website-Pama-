@@ -54,7 +54,7 @@
                         <td>25</td>                       
                         <td>Nasi Padang</td>                       
                         <td>Nasi Padang</td>                       
-                        <td><a href="{{route('editproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
                         <td><a href="#" class="btn  btn-danger">ลบ</a></td>
                       </tr>
                       <tr>
@@ -64,7 +64,7 @@
                         <td>30</td>                        
                         <td>Gundam 90' Edition</td>                        
                         <td>Gundam 90' Edition</td>                        
-                        <td><a href="{{route('editproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
                         <td><a href="#" class="btn  btn-danger">ลบ</a></td>
                       </tr>
                       <tr>
@@ -74,7 +74,7 @@
                         <td>25</td>                       
                         <td>Oblong T-Shirt</td>                       
                         <td>Oblong T-Shirt</td>                       
-                        <td><a href="{{route('editproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
                         <td><a href="#" class="btn  btn-danger">ลบ</a></td>
                       </tr>
                       <tr>
@@ -84,7 +84,7 @@
                         <td>60</td>                        
                         <td>Hat Rounded</td>                        
                         <td>Hat Rounded</td>                        
-                        <td><a href="{{route('editproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
                         <td><a href="#" class="btn  btn-danger">ลบ</a></td>
                       </tr>
                       <tr>
@@ -94,7 +94,7 @@
                         <td>45</td>
                         <td>Baby Powder</td>
                         <td>Baby Powder</td>
-                        <td><a href="{{route('editproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
                         <td><a href="#" class="btn  btn-danger">ลบ</a></td>
                       </tr>
                     </tbody>

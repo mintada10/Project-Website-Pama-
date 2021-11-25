@@ -26,20 +26,20 @@ Route::get('/index','Admin\AdminpageController@index')->name('index');
 //Admin
 Route::get('admin/admin/index','Admin\AdminController@index')->name('admin.index'); 
 Route::get('admin/admin/addadmin','Admin\AdminController@addadmin')->name('addadmin');
-Route::get('admin/admin/editadmin','Admin\AdminController@editadmin')->name('editadmin');
 Route::post('admin/admin/create','Admin\AdminController@create')->name('create');
+Route::get('admin/admin/edit/{id}','Admin\AdminController@edit');
 
 
 //Product
 Route::get('admin/product/index','Admin\ProductController@index')->name('product.index');
 Route::get('admin/product/addproduct','Admin\ProductController@addproduct')->name('addproduct');
-Route::get('admin/product/editproduct','Admin\ProductController@editproduct')->name('editproduct');
+
 
 //Type_product
 Route::get('admin/type_product/index','Admin\Type_productController@index')->name('type_product.index');
 Route::get('admin/type_product/addtypeproduct','Admin\Type_productController@addtypeproduct')->name('addtypeproduct');
 Route::get('admin/type_product/edittypeproduct','Admin\Type_productController@edittypeproduct')->name('edittypeproduct');
-Route::post('admin/type_product/create','Admin\Type_productController@create')->name('createtypeproduct');
+Route::post('admin/type_product/create','Admin\Type_productController@createtypeproduct')->name('createtypeproduct');
 
 //background
 Route::get('admin/background/index','Admin\BackgroundController@index')->name('background.index');

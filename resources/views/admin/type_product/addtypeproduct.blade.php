@@ -29,7 +29,7 @@
                   <h6 class="m-0 font-weight-bold text-primary">หน้า Typeproduct</h6>
                 </div>
                 <div class="card-body">
-                  <form action="{{route('createtypeproduct')}}" method="post">
+                <form action="{{route('createtypeproduct')}}" method="post">
                   {{csrf_field()}}
                   <div class="form-group">
                       <label for="namemenu">Namemenu</label>

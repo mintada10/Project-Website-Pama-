@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Type_product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,12 +17,12 @@ class Type_productController extends Controller
     public function edittypeproduct(){
         return view('admin.type_product.edittypeproduct');
     }
-    public function create(Request $request){
+    public function createtypeproduct(Request $request){
         //dd($request);
     
-        $admin = new Admin;
-        $admin->name_manu	 = $request->namemenu;
-        $admin->save();
+        $typeproduct = new Type_product;
+        $typeproduct->name_manu	= $request->namemenu;
+        $typeproduct->save();
         return redirect('admin/type_product/addtypeproduct');
     }
     
