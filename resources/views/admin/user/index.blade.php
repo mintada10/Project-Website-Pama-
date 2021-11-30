@@ -35,10 +35,9 @@
                     <thead class="thead-light">
                       <tr>
                         <th>ID</th>
-                        <th>ชื่อ</th>
+                        <th>name</th>
                         <th>Email</th>
-                        <th>ชื่อผู้ใช้</th>
-                        <th>รหัสผ่าน</th>
+                    
                         <th>ยืนยัน Email</th>
                         <th>remember_token</th>
                         <th>แก้ไข</th>
@@ -46,61 +45,20 @@
                       </tr>
                     </thead>
                     <tbody>
+                        
                       <tr>
-                        <td><a href="#">RA0449</a></td>
-                        <td>Udin Wayang</td>
-                        <td>pama@gmail.com</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td>pama@gmail.com</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td><a href="{{route('edituser')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA5324</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>pama@gmail.com</td>                        
-                        <td>Gundam 90' </td>                        
-                        <td>Gundam 90' </td>                        
-                        <td>pama@gmail.com</td>                        
-                        <td>Gundam 90' </td>                        
-                        <td><a href="{{route('edituser')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA8568</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>pama@gmail.com </td>                       
-                        <td>Oblong </td>                       
-                        <td>Oblong </td>                       
-                        <td>pama@gmail.com </td>                       
-                        <td>Oblong </td>                       
-                        <td><a href="{{route('edituser')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1453</a></td>
-                        <td>Indri Junanda</td>
-                        <td>pama@gmail.com</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td>pama@gmail.com</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td><a href="{{route('edituser')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1998</a></td>
-                        <td>Udin Cilok</td>
-                        <td>pama@gmail.com</td>
-                        <td>Udin Cilok</td>
-                        <td>Udin Cilok</td>
-                        <td>pama@gmail.com</td>
-                        <td>Baby Powder</td>
-                        <td><a href="{{route('edituser')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
+                        <td></td>
+                                             
+                        <td></td>                       
+                        <td></td>                        
+                        <td></td>                       
+                        <td></td>                       
+                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="" class="btn  btn-danger">ลบ</a></td>
+                      </tr>   
+                       
+                                      
+                    </tr>
                     </tbody>
                   </table>
                 </div>

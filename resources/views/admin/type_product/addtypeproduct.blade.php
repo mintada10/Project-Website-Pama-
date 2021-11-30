@@ -29,8 +29,7 @@
                   <h6 class="m-0 font-weight-bold text-primary">หน้า Typeproduct</h6>
                 </div>
                 <div class="card-body">
-                <form action="{{route('createtypeproduct')}}" method="post">
-                  {{csrf_field()}}
+                <form>
                   <div class="form-group">
                       <label for="namemenu">Namemenu</label>
                       <input type="text" class="form-control" id="namemenu" name="namemenu" placeholder="กรอกข้อมูล">

@@ -14,16 +14,5 @@ class Type_productController extends Controller
     public function addtypeproduct(){
         return view('admin.type_product.addtypeproduct');
     }
-    public function edittypeproduct(){
-        return view('admin.type_product.edittypeproduct');
-    }
-    public function createtypeproduct(Request $request){
-        //dd($request);
-    
-        $typeproduct = new Type_product;
-        $typeproduct->name_manu	= $request->namemenu;
-        $typeproduct->save();
-        return redirect('admin/type_product/addtypeproduct');
-    }
-    
+ 
 }

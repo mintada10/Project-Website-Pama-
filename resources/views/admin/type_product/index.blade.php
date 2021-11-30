@@ -41,36 +41,14 @@
                       </tr>
                     </thead>
                     <tbody>
+
                       <tr>
-                        <td><a href="#">RA0449</a></td>
-                        <td>Udin Wayang</td>
+                        <td></td>
+                        <td></td>
                         <td><a href="{{route('edittypeproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
                         <td><a href="#" class="btn  btn-danger">ลบ</a></td>
                       </tr>
-                      <tr>
-                        <td><a href="#">RA5324</a></td>
-                        <td>Jaenab Bajigur</td>                                          
-                        <td><a href="{{route('edittypeproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA8568</a></td>
-                        <td>Rivat Mahesa</td>                                         
-                        <td><a href="{{route('edittypeproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1453</a></td>
-                        <td>Indri Junanda</td>                                           
-                        <td><a href="{{route('edittypeproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1998</a></td>
-                        <td>Udin Cilok</td>
-                        <td><a href="{{route('edittypeproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
+                     
                     </tbody>
                   </table>
                 </div>

@@ -55,8 +55,8 @@
                         <td>{{$showadmin->created_at}}</td>
                         <td>{{$showadmin->updated_at}}</td>
 
-                        <td><a href="{{url('admin/admin/edit/'.$showadmin->id_admin)}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
+                        <td><a href="{{url('admin/admin/editadmin/'.$showadmin->id_admin)}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="{{url('admin/admin/deleteadmin/'.$showadmin->id_admin)}}" class="btn  btn-danger">ลบ</a></td>
 
                    </tr>
                 @endforeach
