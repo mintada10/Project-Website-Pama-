@@ -35,12 +35,21 @@ Route::get('admin/admin/deleteadmin/{id}','Admin\AdminController@deleteadmin');
 //Product
 Route::get('admin/product/index','Admin\ProductController@index')->name('product.index');
 Route::get('admin/product/addproduct','Admin\ProductController@addproduct')->name('addproduct');
+Route::post('admin/product/createproduct','Admin\ProductController@createproduct')->name('createproduct');
+Route::get('admin/product/editproduct/{id}','Admin\ProductController@editproduct');
+Route::post('admin/product/updateproduct/{id}','Admin\ProductController@updateproduct');
+route::get('admin/product/deleteproduct/{id}','Admin\ProductController@deleteproduct');
 
 
 
 //Type_product
 Route::get('admin/type_product/index','Admin\Type_productController@index')->name('type_product.index');
 Route::get('admin/type_product/addtypeproduct','Admin\Type_productController@addtypeproduct')->name('addtypeproduct');
+Route::post('admin/type_product/createtypeproduct','Admin\Type_productController@createtypeproduct')->name('createtypeproduct');
+Route::get('admin/type_product/edittypeproduct/{id}','Admin\Type_productController@edittypeproduct');
+Route::post('admin/type_product/updatetypeproduct/{id}','Admin\Type_productController@updatetypeproduct');
+Route::get('admin/type_product/delettypeproduct/{id}','Admin\Type_productController@delettypeproduct');
+
 
 
 //background
@@ -50,8 +59,9 @@ Route::get('admin/background/editbackground','Admin\BackgroundController@editbac
 
 //user
 Route::get('admin/user/index','Admin\UserController@index')->name('user.index');
-Route::get('admin/user/adduser','Admin\UserController@adduser')->name('adduser');
-Route::get('admin/user/edituser','Admin\UserController@edituser')->name('edituser');
+Route::get('admin/user/edituser/{id}','Admin\UserController@edituser');
+Route::post('admin/user/updateuser/{id}','Admin\UserController@updateuser');
+Route::get('admin/user/deleteuser/{id}','Admin\UserController@deleteuser');
 
 //content
 Route::get('admin/content/index','Admin\ContentController@index')->name('content.index');

@@ -1,7 +1,43 @@
 @include ('layouts.admin.head')
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <body id="page-top">
   <div id="wrapper">
+  @if (session('success'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'บันทึกข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+
+        @if (session('update'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'แก้ไขข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+
+        @if (session('delet'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'ลบข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+
     <!-- Sidebar -->
     @include ('layouts.admin.sidebar')
     <!-- Sidebar -->
@@ -29,26 +65,32 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">หน้า Typeproduct</h6> <a href="{{route('addtypeproduct')}}" class="btn btn-success">เพิ่มข้อมูล</a>
                 </div>
-                
+
                 <div class="table-responsive">
                   <table class="table align-items-center table-flush">
                     <thead class="thead-light">
                       <tr>
                         <th>ID</th>
                         <th>ชื่อเมนู</th>
+                        <th>created_at</th>
+                        <th>updated_at</th>
                         <th>แก้ไข</th>
                         <th>ลบ</th>
                       </tr>
                     </thead>
                     <tbody>
 
+                      @foreach ($typeproduct as $showtypeproduct)
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td><a href="{{route('edittypeproduct')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
+                        <td scope="row">{{$showtypeproduct->id_pt}}</td>
+                        <td>{{$showtypeproduct->name_manu}}</td>
+                        <td>{{$showtypeproduct->created_at}}</td>
+                        <td>{{$showtypeproduct->updated_at}}</td>
+                        <td><a href="{{url('admin/type_product/edittypeproduct/'.$showtypeproduct->id_pt)}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="{{url('admin/type_product/delettypeproduct/'.$showtypeproduct->id_pt)}}" class="btn  btn-danger">ลบ</a></td>
                       </tr>
-                     
+                      @endforeach
+
                     </tbody>
                   </table>
                 </div>
@@ -83,9 +125,7 @@
         <!---Container Fluid-->
       </div>
       <!-- Footer -->
-
-    @include ('layouts.admin.footer')
-
+      @include ('layouts.admin.footer')
       <!-- Footer -->
     </div>
   </div>
@@ -95,7 +135,7 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
- 
+
 </body>
 
 </html>

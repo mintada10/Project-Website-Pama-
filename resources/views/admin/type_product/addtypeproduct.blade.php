@@ -29,15 +29,20 @@
                   <h6 class="m-0 font-weight-bold text-primary">หน้า Typeproduct</h6>
                 </div>
                 <div class="card-body">
-                <form>
+                <form action="{{route('createtypeproduct')}}" method="post">
+                {{csrf_field()}}
+
                   <div class="form-group">
-                      <label for="namemenu">Namemenu</label>
-                      <input type="text" class="form-control" id="namemenu" name="namemenu" placeholder="กรอกข้อมูล">
+                      <label for="name_manu">Namemenu</label>
+                      <input type="text" class="form-control" id="name_manu" name="name_manu" placeholder="กรอกข้อมูล">
                       </div>
                       <div class="form-group">
-                    </div>
+                      @error('name_manu')
+                      <span class="text-danger">{{$message}}</span>
+                      @enderror
+                  </div>
                  
-                    <button type="submit" name="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" name="submit" class="btn btn-success">Submit</button> 
                     <a href="{{route('type_product.index')}}" class="btn btn-primary">ย้อนกลับ</a>
                   </form>
                 </div>

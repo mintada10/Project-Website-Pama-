@@ -30,37 +30,78 @@
                   <h6 class="m-0 font-weight-bold text-primary">หน้า Product</h6>
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form action="{{route('createproduct')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                 
                     <div class="form-group">
-                      <label for="exampleInputEmail1">ID</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกข้อมูล">
-                      </div>
-                    <div class="form-group">
-                    <label for="exampleInputEmail1">รูปภาพ</label>
+                     <label for="category">รูปภาพ</label>
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">เลือกไฟล์</label>
+                       <input type="file" class="custom-file-input" name="image" id="image">
+                       <label class="custom-file-label" for="image">Choose file</label>
+                       <div class="row mt-3">
+                            @error('image')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
                       </div>
                     </div>
+
                     <div class="form-group">
-                      <label for="exampleInputEmail1">ชื่อ</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกข้อมูล">                    
+                      <label for="name">ชื่อ</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="กรอกข้อมูล">
+                      <div class="row mt-3">
+                            @error('name')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
                     </div>
+
                     <div class="form-group">
-                      <label for="exampleInputEmail1">ราคา</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกข้อมูล">                    
+                      <label for="price">ราคา</label>
+                      <input type="text" class="form-control" id="price" name="price" placeholder="กรอกข้อมูล">    
+                      <div class="row mt-3">
+                            @error('price')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>                
                     </div>
+
                     <div class="form-group">
-                      <label for="exampleInputEmail1">ผู้สร้างเนื้อหา</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกข้อมูล">                    
+                      <label for="id_admin">ผู้สร้างเนื้อหา</label>
+                      <input type="text" class="form-control" id="id_admin" name="id_admin"  placeholder="กรอกข้อมูล">   
+                      <div class="row mt-3">
+                            @error('id_admin')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>                 
                     </div>
+
+                   
                                    
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">ประเภทสินค้า</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกข้อมูล">                    
+                      <label for="id_pt">ประเภทสินค้า</label>
+                      <input type="text" class="form-control" id="	id_pt" name="id_pt"  placeholder="กรอกข้อมูล">   
+                      <div class="row mt-3">
+                            @error('id_pt')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>                 
                     </div>
-                    </div>
+                    </div> -->
+
+                     <div class="form-group">
+                        <label>ประเภทสินค้า</label>
+                        <select class="form-control" name="id_pt" >
+                            @foreach ($typeproducts as $typeproduct)
+                            <option value="{{$typeproduct->id_pt}}">{{$typeproduct->name_manu}}</option>
+                            @endforeach
+                        </select>
+                      </div>
+                    
+                    
+
+                  
 
                    
                     

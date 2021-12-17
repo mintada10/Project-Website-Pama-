@@ -14,4 +14,8 @@ class Admin extends Model
     //     'email'];
 
     protected $primaryKey =	'id_admin';
+
+    public function product(){
+        return $this->hasMany(Product::class,'id_admin');
+    }
 }

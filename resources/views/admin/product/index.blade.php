@@ -40,63 +40,34 @@
                         <th>รูปภาพ</th>
                         <th>ชื่อ</th>
                         <th>ราคา</th>
-                        <th>ผู้สร้างเนื้อหา</th>
+                        <!-- <th>ผู้สร้างเนื้อหา</th> -->
                         <th>ประเภทสินค้า</th>
                         <th>แก้ไข</th>
                         <th>ลบ</th>
                       </tr>
                     </thead>
+
                     <tbody>
+                    @foreach ($product as $products )
+
                       <tr>
-                        <td><a href="#">RA0449</a></td>
-                        <td>Udin Wayang</td>
-                        <td>Nasi Padang</td>                       
-                        <td>25</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
+                        <td>{{$products->id_product}}</td>
+                        <td>
+                          <img src="{{asset('admin/images/'.$products->image)}}" alt="" style="width:100px">
+                        </td>
+                        <td>{{$products->name}}</td>
+                        <td>{{$products->price}}</td>
+                        <!-- <td>{{$products->admin->name}}</td> -->
+                        <td>{{$products->typeproduct->name_manu}}</td>
+
+                                              
+                        <td><a href="{{url('admin/product/editproduct/'.$products->id_product)}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="{{url('admin/product/deleteproduct/'.$products->id_product)}}" class="btn  btn-danger">ลบ</a></td>
                       </tr>
-                      <tr>
-                        <td><a href="#">RA5324</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>Gundam 90' Edition</td>                        
-                        <td>30</td>                        
-                        <td>Gundam 90' Edition</td>                        
-                        <td>Gundam 90' Edition</td>                        
-                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA8568</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>Oblong T-Shirt</td>                       
-                        <td>25</td>                       
-                        <td>Oblong T-Shirt</td>                       
-                        <td>Oblong T-Shirt</td>                       
-                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1453</a></td>
-                        <td>Indri Junanda</td>
-                        <td>Hat Rounded</td>                        
-                        <td>60</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1998</a></td>
-                        <td>Udin Cilok</td>
-                        <td>Baby Powder</td>
-                        <td>45</td>
-                        <td>Baby Powder</td>
-                        <td>Baby Powder</td>
-                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
+
+                    @endforeach
+                      
+                      
                     </tbody>
                   </table>
                 </div>

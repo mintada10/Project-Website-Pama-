@@ -27,7 +27,7 @@
               <!-- Simple Tables -->
               <div class="card">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">หน้า User</h6> <a href="{{route('adduser')}}"class="btn btn-success">เพิ่มข้อมูล</a>
+                  <h6 class="m-0 font-weight-bold text-primary">หน้า User</h6> <a href="form_add_user.php" class="btn btn-success">เพิ่มข้อมูล</a>
                 </div>
                 
                 <div class="table-responsive">
@@ -35,30 +35,25 @@
                     <thead class="thead-light">
                       <tr>
                         <th>ID</th>
-                        <th>name</th>
+                        <th>ชื่อ</th>
                         <th>Email</th>
-                    
-                        <th>ยืนยัน Email</th>
-                        <th>remember_token</th>
+                        <th>ชื่อผู้ใช้</th>
                         <th>แก้ไข</th>
                         <th>ลบ</th>
                       </tr>
                     </thead>
                     <tbody>
-                        
+                      @foreach ($users as $user)
                       <tr>
-                        <td></td>
-                                             
-                        <td></td>                       
-                        <td></td>                        
-                        <td></td>                       
-                        <td></td>                       
-                        <td><a href="" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="" class="btn  btn-danger">ลบ</a></td>
-                      </tr>   
-                       
-                                      
-                    </tr>
+                        <td>{{$user->id}}</td>
+                        <td>{{$user->name}}</td>
+                        <td>{{$user->email}}</td>                       
+                        <td>{{$user->username}}</td>                                             
+                        <td><a href="{{url('admin/user/edituser/'.$user->id)}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="{{url('admin/user/deleteuser/'.$user->id)}}" class="btn  btn-danger">ลบ</a></td>
+                      </tr>
+                      @endforeach
+                     
                     </tbody>
                   </table>
                 </div>
@@ -93,9 +88,7 @@
         <!---Container Fluid-->
       </div>
       <!-- Footer -->
-    
-    @include ('layouts.admin.footer')
-    
+      @include ('layouts.admin.footer')
       <!-- Footer -->
     </div>
   </div>

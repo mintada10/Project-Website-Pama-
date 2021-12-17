@@ -13,6 +13,7 @@ class AdminController extends Controller
         return view('admin.admin.index',compact('admin'));
     }
     public function addadmin(){
+        
         return view('admin.admin.addadmin');
     }
     public function createadmin(Request $request){
@@ -43,7 +44,7 @@ class AdminController extends Controller
         $admin->password = $request->password;
         $admin->email    = $request->email;
         $admin->save();
-        return redirect('admin/admin/index');
+        return redirect('admin/admin/index')->with('success','บันทึกข้อมูลเรียบร้อบแล้ว');
     }
 
     public function editadmin($id_admin){
@@ -77,12 +78,12 @@ class AdminController extends Controller
         $admin->password = $request->password;
         $admin->email    = $request->email;
         $admin->save();
-        return redirect('admin/admin/index');
+        return redirect('admin/admin/index')->with('update','แก้ไขข้อมูลเรียบร้อบแล้ว');
     }
 
     public function deleteadmin($id_admin){
         Admin::destroy($id_admin);
-        return redirect('admin/admin/index');
+        return redirect('admin/admin/index')->with('delet','ลบข้อมูลเรียบร้อบแล้ว');
     }
 
     
