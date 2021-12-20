@@ -661,7 +661,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="{{asset('fontend/img/team/sahayod.jpg')}}" class="img-fluid" alt="">
+              <img src="{{asset('fontend/img/team/tester.jpg')}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Sahayod Boonyoo</h4>
@@ -679,7 +679,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <img src="{{asset('fontend/img/team/thanakron.jpg')}}" class="img-fluid" alt="">
+              <img src="{{asset('fontend/img/team/backend.jpg')}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Thanakorn Kaytang</h4>
@@ -697,7 +697,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <img src="{{asset('fontend/img/team/mintada.jpg')}}" class="img-fluid" alt="">
+              <img src="{{asset('fontend/img/team/fontend.jpg')}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Mintada Monta</h4>

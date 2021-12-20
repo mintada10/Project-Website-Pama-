@@ -18,4 +18,7 @@ class Admin extends Model
     public function product(){
         return $this->hasMany(Product::class,'id_admin');
     }
+    public function background(){
+        return $this->hasMany(Background::class,'id_admin');
+    }
 }

@@ -1,4 +1,5 @@
 @include ('layouts.admin.head')
+
 <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
@@ -28,7 +29,7 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">หน้า Background</h6> <a href="{{route('addbackground')}}" class="btn btn-success">เพิ่มข้อมูล</a>
                 </div>
-                
+
                 <div class="table-responsive">
                   <table class="table align-items-center table-flush">
                     <thead class="thead-light">
@@ -42,46 +43,24 @@
                       </tr>
                     </thead>
                     <tbody>
+
+                      @foreach ($background as $backgrounds)
+
                       <tr>
-                        <td><a href="#">RA0449</a></td>
-                        <td>Udin Wayang</td>
-                        <td>Nasi Padang</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td><a href="{{route('editbackground')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
+                        <td>{{$backgrounds->id_bg }}</td>
+                        <td>
+                          <img src="{{asset('admin/imagebackground/'.$backgrounds->image)}}" alt="" style="width:100px">
+                        </td>
+                        <td>{{$backgrounds->admin->name}}</td>
+                        <td>{{$backgrounds->status}}</td>
+                        <td><a href="{{url('admin/background/editbackground/'.$backgrounds->id_bg )}}" class="btn  btn-warning">แก้ไข</a></td>
+                        <td><a href="{{url('admin/background/deletebackground/'.$backgrounds->id_bg )}}" class="btn  btn-danger">ลบ</a></td>
                       </tr>
-                      <tr>
-                        <td><a href="#">RA5324</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>Gundam 90' Edition</td>                        
-                        <td>Gundam 90' Edition</td>                        
-                        <td><a href="{{route('editbackground')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA8568</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>Oblong T-Shirt</td>                       
-                        <td>Oblong T-Shirt</td>                       
-                        <td><a href="{{route('editbackground')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1453</a></td>
-                        <td>Indri Junanda</td>
-                        <td>Hat Rounded</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td><a href="{{route('editbackground')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1998</a></td>
-                        <td>Udin Cilok</td>
-                        <td>Baby Powder</td>
-                        <td>Baby Powder</td>
-                        <td><a href="{{route('editbackground')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
+
+                      @endforeach
+
+
+
                     </tbody>
                   </table>
                 </div>
@@ -116,9 +95,9 @@
         <!---Container Fluid-->
       </div>
       <!-- Footer -->
-    
-    @include ('layouts.admin.footer')
-    
+
+      @include ('layouts.admin.footer')
+
       <!-- Footer -->
     </div>
   </div>
@@ -128,7 +107,7 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
- 
+
 </body>
 
 </html>

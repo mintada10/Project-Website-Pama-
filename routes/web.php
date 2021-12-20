@@ -55,7 +55,12 @@ Route::get('admin/type_product/delettypeproduct/{id}','Admin\Type_productControl
 //background
 Route::get('admin/background/index','Admin\BackgroundController@index')->name('background.index');
 Route::get('admin/background/addbackground','Admin\BackgroundController@addbackground')->name('addbackground');
-Route::get('admin/background/editbackground','Admin\BackgroundController@editbackground')->name('editbackground');
+Route::post('admin/background/createbackground','Admin\BackgroundController@createbackground')->name('createbackground');
+Route::get('admin/background/editbackground/{id}','Admin\BackgroundController@editbackground');
+Route::post('admin/background/updatebackground/{id}','Admin\BackgroundController@updatebackground');
+Route::get('admin/background/deletebackground/{id}','Admin\BackgroundController@deletebackground');
+
+
 
 //user
 Route::get('admin/user/index','Admin\UserController@index')->name('user.index');

@@ -16,8 +16,7 @@ class ProductController extends Controller
     {
         $this->middleware("VerifyIsTypeproduct")->only(['index','createproduct']);
     }
-    public function index()
-    {
+    public function index(){
         $product = Product::all();
         return view('admin.product.index', compact('product'));
     }
