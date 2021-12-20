@@ -1,7 +1,18 @@
 @include ('layouts.admin.head')
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <body id="page-top">
   <div id="wrapper">
+  @if (session('typeproduct'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'ต้องมีประเภทสินค้าอย่างน้อย 1 รายการ',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
     <!-- Sidebar -->
     @include ('layouts.admin.sidebar')
     <!-- Sidebar -->

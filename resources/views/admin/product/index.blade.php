@@ -1,7 +1,42 @@
 @include ('layouts.admin.head')
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <body id="page-top">
   <div id="wrapper">
+  @if (session('success'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'บันทึกข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+        @if (session('update'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'แก้ไขข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+
+        @if (session('delet'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'ลบข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+
     <!-- Sidebar -->
 
     @include ('layouts.admin.sidebar')
@@ -40,7 +75,7 @@
                         <th>รูปภาพ</th>
                         <th>ชื่อ</th>
                         <th>ราคา</th>
-                        <!-- <th>ผู้สร้างเนื้อหา</th> -->
+                        <th>ผู้สร้างเนื้อหา</th>
                         <th>ประเภทสินค้า</th>
                         <th>แก้ไข</th>
                         <th>ลบ</th>
@@ -56,13 +91,13 @@
                           <img src="{{asset('admin/images/'.$products->image)}}" alt="" style="width:100px">
                         </td>
                         <td>{{$products->name}}</td>
-                        <td>{{$products->price}}</td>
-                        <!-- <td>{{$products->admin->name}}</td> -->
+                        <td>{{number_format($products->price)}} บาท </td>
+                        <td>{{$products->admin->name}}</td>
                         <td>{{$products->typeproduct->name_manu}}</td>
 
                                               
-                        <td><a href="{{url('admin/product/editproduct/'.$products->id_product)}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="{{url('admin/product/deleteproduct/'.$products->id_product)}}" class="btn  btn-danger">ลบ</a></td>
+                        <td><a href="{{url('admin/product/editproduct/'.$products->id_product)}}" class="btn  btn-warning"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="{{url('admin/product/deleteproduct/'.$products->id_product)}}" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></a></td>
                       </tr>
 
                     @endforeach

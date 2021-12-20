@@ -12,6 +12,10 @@ use File;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("VerifyIsTypeproduct")->only(['index','createproduct']);
+    }
     public function index()
     {
         $product = Product::all();
@@ -65,7 +69,7 @@ class ProductController extends Controller
         }
 
         $product->save();
-        return redirect()->route('product.index');
+        return redirect()->route('product.index')->with('success','บันทึกข้อมูลเรียบร้อบแล้ว');
     }
 
     public function editproduct($id)
@@ -119,7 +123,7 @@ class ProductController extends Controller
         }
 
         $product->save();
-        return redirect()->route('product.index');
+        return redirect()->route('product.index')->with('update','แก้ไขข้อมูลเรียบร้อบแล้ว');
     }
     public function deleteproduct($id){
         $deleteproduct = Product::find($id);
@@ -127,7 +131,7 @@ class ProductController extends Controller
             File::delete(public_path() . '/admin/images/' . $deleteproduct->image);
         }
         $deleteproduct->delete();
-        return redirect()->route('product.index');
+        return redirect()->route('product.index')->with('delet','ลบข้อมูลเรียบร้อบแล้ว');
 
     }
 }

@@ -38,6 +38,20 @@
         </script>
         @endif
 
+        @if (session('error'))
+        <script>
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'ไม่สามารถลบประเภทสินค้าได้เนื่องจากมีสินค้าอยู่',
+                showConfirmButton: false,
+                timer: 2500
+            })
+        </script>
+        @endif
+        
+        
+
     <!-- Sidebar -->
     @include ('layouts.admin.sidebar')
     <!-- Sidebar -->
@@ -58,22 +72,25 @@
             </ol>
           </div>
 
+            
+
           <div class="row">
             <div class="col-lg-12 mb-4">
-              <!-- Simple Tables -->
-              <div class="card">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">หน้า Typeproduct</h6> <a href="{{route('addtypeproduct')}}" class="btn btn-success">เพิ่มข้อมูล</a>
-                </div>
+            <!-- Simple Tables -->
+            <div class="card">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">หน้า Typeproduct</h6> <a href="{{route('addtypeproduct')}}" class="btn btn-success">เพิ่มข้อมูล</a>
+          </div>
 
-                <div class="table-responsive">
+                @if ($typeproduct->count()>0)
+            <div class="table-responsive">
                   <table class="table align-items-center table-flush">
                     <thead class="thead-light">
                       <tr>
                         <th>ID</th>
                         <th>ชื่อเมนู</th>
+                        <th>จำนวนสินค้า</th>
                         <th>created_at</th>
-                        <th>updated_at</th>
                         <th>แก้ไข</th>
                         <th>ลบ</th>
                       </tr>
@@ -84,8 +101,8 @@
                       <tr>
                         <td scope="row">{{$showtypeproduct->id_pt}}</td>
                         <td>{{$showtypeproduct->name_manu}}</td>
+                        <td>{{$showtypeproduct->product->count()}}</td>
                         <td>{{$showtypeproduct->created_at}}</td>
-                        <td>{{$showtypeproduct->updated_at}}</td>
                         <td><a href="{{url('admin/type_product/edittypeproduct/'.$showtypeproduct->id_pt)}}" class="btn  btn-warning">แก้ไข</a></td>
                         <td><a href="{{url('admin/type_product/delettypeproduct/'.$showtypeproduct->id_pt)}}" class="btn  btn-danger">ลบ</a></td>
                       </tr>
@@ -129,11 +146,19 @@
       <!-- Footer -->
     </div>
   </div>
-
   <!-- Scroll to top -->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
+
+  @else
+    <div class="alert alert-danger">
+      <p>ไม่มีข้อมูลประเภทสินค้า</p>
+    </div>
+  @endif
+
+               
+  
 
 
 </body>

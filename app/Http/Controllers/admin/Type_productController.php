@@ -54,6 +54,10 @@ class Type_productController extends Controller
         return redirect('admin/type_product/index')->with('update','แก้ไขข้อมูลเรียบร้อบแล้ว');
     }
     public function delettypeproduct($id_pt){
+        $typeproduct = Type_product::find($id_pt);
+        if($typeproduct->product->count()>0){
+            return redirect()->back()->with('error','ไม่สามารถลบประเภทสินค้าได้เนื่องจากมีสินค้าอยู่');
+        }
         Type_product::destroy($id_pt);
         return redirect('admin/type_product/index')->with('delet','ลบข้อมูลเรียบร้อบแล้ว');
     }

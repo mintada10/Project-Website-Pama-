@@ -79,7 +79,7 @@
                             @enderror
                         </div>                 
                     </div>
-<!--                                    
+                <!--                                    
                       <div class="form-group">
                     <div class="form-group">
                       <label for="id_pt">ประเภทสินค้า</label>
@@ -95,12 +95,12 @@
                     <div class="form-group">
                         <label>ประเภทสินค้า</label>
                         <select class="form-control" name="id_pt" >
-                        
+                        <option selected="selected" value="{{$editproduct->id_pt}}">{{$editproduct->typeproduct->name_manu}}</option>
                             @foreach ($typeproducts as $typeproduct)
                             <option value="{{$typeproduct->id_pt}}">{{$typeproduct->name_manu}}</option>
                             @endforeach
                         </select>
-                    </div>
+                      </div>
                    
                     
                    
