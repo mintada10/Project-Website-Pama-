@@ -46,61 +46,24 @@
                       </tr>
                     </thead>
                     <tbody>
+                    @foreach ($homepage as $homepages)
+                     
                       <tr>
-                        <td><a href="#">RA0449</a></td>
-                        <td>Udin Wayang</td>
-                        <td>Nasi Padang</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td>250</td>                       
-                        <td>Nasi Padang</td>                       
-                        <td><a href="{{route('edithomepage')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
+                        <td>{{$homepages->id_homepage}}</td>
+                        <td>{{$homepages->information_test}}</td>
+                        <td>{{$homepages->recommended_product}}</td>                       
+                        <td>{{$homepages->product_name}}</td>                       
+                        <td>
+                          <img src="{{asset('admin/imagehomepage/'.$homepages->image_bg)}}" alt="" style="width:100px">
+                        </td>                      
+                        <td>{{number_format($homepages->price)}} บาท</td>                       
+                        <td>{{$homepages->admin->name}}</td>                       
+                        <td><a href="{{url('admin/homepage/edithomepage/'.$homepages->id_homepage)}}" class="btn  btn-warning"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="{{url('admin/homepage/deletehomepage/'.$homepages->id_homepage)}}" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></a></td>
                       </tr>
-                      <tr>
-                        <td><a href="#">RA5324</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>Gundam 90'</td>                        
-                        <td>Gundam 90'</td>                        
-                        <td>Gundam 90'</td>                        
-                        <td>1,500</td>                        
-                        <td>Gundam 90'</td>                        
-                        <td><a href="{{route('edithomepage')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA8568</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>Rivat Mahesa</td>
-                        <td>Rivat Mahesa</td>
-                        <td>Rivat Mahesa</td>
-                        <td>500</td>
-                        <td>Oblong T-Shirt</td>                       
-                        <td><a href="{{route('edithomepage')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1453</a></td>
-                        <td>Indri Junanda</td>
-                        <td>Hat Rounded</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td>1,000</td>                        
-                        <td>Hat Rounded</td>                        
-                        <td><a href="{{route('edithomepage')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1998</a></td>
-                        <td>Udin Cilok</td>
-                        <td>Udin Cilok</td>
-                        <td>Udin Cilok</td>
-                        <td>Udin Cilok</td>
-                        <td>450</td>
-                        <td>Baby Powder</td>
-                        <td><a href="{{route('edithomepage')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="#" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
+
+                    @endforeach
+
                     </tbody>
                   </table>
                 </div>

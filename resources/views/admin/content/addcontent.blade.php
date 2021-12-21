@@ -29,24 +29,44 @@
                   <h6 class="m-0 font-weight-bold text-primary">หน้า Content</h6>
                 </div>
                 <div class="card-body">
-                  <form>
-                  <div class="form-group">
-                      <label for="exampleInputEmail1">ID</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกข้อมูล">
+
+                  <form action="{{route('createcontent')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+
+
                      
-                      <div class="form-group">
-                    <label for="exampleInputEmail1">รูปภาพ</label>
+                    <div class="form-group">
+                     <label for="category">รูปภาพ</label>
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">เลือกไฟล์</label>
+                       <input type="file" class="custom-file-input" name="image" id="image">
+                       <label class="custom-file-label" for="image">Choose file</label>
+                       <div class="row mt-3">
+                            @error('image')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
                       </div>
                     </div>
 
-                    </div>
-                    <div class="form-group">
+                    
+                    <!-- <div class="form-group">
                       <label for="exampleInputEmail1">ผู้สร้างเเนื้อหา</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกข้อมูล">                    
-                    </div>
+                      <input type="text" class="form-control" id="id_admin" name="id_admin" placeholder="กรอกข้อมูล"> 
+                      <div class="row mt-3">
+                            @error('id_admin')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>                   
+                    </div> -->
+
+                    <div class="form-group">
+                        <label>ผู้สร้างเนื้อหา</label>
+                        <select class="form-control" name="id_admin" >
+                            @foreach ($admins as $admin)
+                            <option value="{{$admin->id_admin}}">{{$admin->name}}</option>
+                            @endforeach
+                        </select>
+                      </div>
                    
                     
                    

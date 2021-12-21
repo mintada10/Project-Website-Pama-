@@ -103,8 +103,8 @@
                         <td>{{$showtypeproduct->name_manu}}</td>
                         <td>{{$showtypeproduct->product->count()}}</td>
                         <td>{{$showtypeproduct->created_at}}</td>
-                        <td><a href="{{url('admin/type_product/edittypeproduct/'.$showtypeproduct->id_pt)}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="{{url('admin/type_product/delettypeproduct/'.$showtypeproduct->id_pt)}}" class="btn  btn-danger">ลบ</a></td>
+                        <td><a href="{{url('admin/type_product/edittypeproduct/'.$showtypeproduct->id_pt)}}" class="btn  btn-warning"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="{{url('admin/type_product/delettypeproduct/'.$showtypeproduct->id_pt)}}" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></a></td>
                       </tr>
                       @endforeach
 

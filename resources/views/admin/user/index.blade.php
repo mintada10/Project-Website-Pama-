@@ -27,7 +27,7 @@
               <!-- Simple Tables -->
               <div class="card">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">หน้า User</h6> <a href="form_add_user.php" class="btn btn-success">เพิ่มข้อมูล</a>
+                  <h6 class="m-0 font-weight-bold text-primary">หน้า User</h6> 
                 </div>
                 
                 <div class="table-responsive">
@@ -49,8 +49,8 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>                       
                         <td>{{$user->username}}</td>                                             
-                        <td><a href="{{url('admin/user/edituser/'.$user->id)}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="{{url('admin/user/deleteuser/'.$user->id)}}" class="btn  btn-danger">ลบ</a></td>
+                        <td><a href="{{url('admin/user/edituser/'.$user->id)}}" class="btn  btn-warning"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="{{url('admin/user/deleteuser/'.$user->id)}}" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></a></td>
                       </tr>
                       @endforeach
                      

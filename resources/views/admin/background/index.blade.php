@@ -53,8 +53,8 @@
                         </td>
                         <td>{{$backgrounds->admin->name}}</td>
                         <td>{{$backgrounds->status}}</td>
-                        <td><a href="{{url('admin/background/editbackground/'.$backgrounds->id_bg )}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="{{url('admin/background/deletebackground/'.$backgrounds->id_bg )}}" class="btn  btn-danger">ลบ</a></td>
+                        <td><a href="{{url('admin/background/editbackground/'.$backgrounds->id_bg )}}" class="btn  btn-warning"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="{{url('admin/background/deletebackground/'.$backgrounds->id_bg )}}" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></a></td>
                       </tr>
 
                       @endforeach

@@ -71,12 +71,20 @@ Route::get('admin/user/deleteuser/{id}','Admin\UserController@deleteuser');
 //content
 Route::get('admin/content/index','Admin\ContentController@index')->name('content.index');
 Route::get('admin/content/addcontent','Admin\ContentController@addcontent')->name('addcontent');
-Route::get('admin/content/editcontent','Admin\ContentController@editcontent')->name('editcontent');
+Route::post('admin/content/createcontent','Admin\ContentController@createcontent')->name('createcontent');
+Route::get('admin/content/editcontent/{id}','Admin\ContentController@editcontent');
+Route::post('admin/content/updatecontent/{id}','Admin\ContentController@updatecontent');
+Route::get('admin/content/deletecontent/{id}','Admin\ContentController@deletecontent');
+
 
 //homepage
 Route::get('admin/homepage/index','Admin\HomepageController@index')->name('homepage.index');
 Route::get('admin/homepage/addhomepage','Admin\HomepageController@addhomepage')->name('addhomepage');
-Route::get('admin/homepage/edithomepage','Admin\HomepageController@edithomepage')->name('edithomepage');
+Route::post('admin/homepage/createhomepage','Admin\HomepageController@createhomepage')->name('createhomepage');
+Route::get('admin/homepage/edithomepage/{id}','Admin\HomepageController@edithomepage');
+Route::post('admin/homepage/updatehomepage/{id}','Admin\HomepageController@updatehomepage');
+Route::get('admin/homepage/deletehomepage/{id}','Admin\HomepageController@deletehomepage');
+
 
 Auth::routes();
 

@@ -21,4 +21,10 @@ class Admin extends Model
     public function background(){
         return $this->hasMany(Background::class,'id_admin');
     }
+    public function content(){
+        return $this->hasMany(Content::class,'id_admin');
+    }
+    public function Homepage(){
+        return $this->hasMany(Content::class,'id_admin');
+    }
 }

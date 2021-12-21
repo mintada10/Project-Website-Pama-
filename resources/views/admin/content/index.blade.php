@@ -42,41 +42,17 @@
                       </tr>
                     </thead>
                     <tbody>
+                    @foreach ($content as $contents)
                       <tr>
-                        <td><a href="#">RA0449</a></td>
-                        <td>Udin Wayang</td>
-                        <td>Nasi Padang</td>                       
-                        <td><a href="{{route('editcontent')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="form_delete_content.php" class="btn  btn-danger">ลบ</a></td>
+                        <td>{{$contents->id_content}}</td>
+                        <td>
+                          <img src="{{asset('admin/imagecontent/'.$contents->image)}}" alt="" style="width:100px">
+                        </td>
+                        <td>{{$contents->admin->name}}</td>                       
+                        <td><a href="{{url('admin/content/editcontent/'.$contents->id_content)}}" class="btn  btn-warning"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="{{url('admin/content/deletecontent/'.$contents->id_content)}}" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></a></td>
                       </tr>
-                      <tr>
-                        <td><a href="#">RA5324</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>Gundam 90' Edition</td>                        
-                        <td><a href="{{route('editcontent')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="form_delete_content.php" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA8568</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>Oblong T-Shirt</td>                       
-                        <td><a href="{{route('editcontent')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="form_delete_content.php" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1453</a></td>
-                        <td>Indri Junanda</td>
-                        <td>Hat Rounded</td>                        
-                        <td><a href="{{route('editcontent')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="form_delete_content.php" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">RA1998</a></td>
-                        <td>Udin Cilok</td>
-                        <td>Baby Powder</td>
-                        <td><a href="{{route('editcontent')}}" class="btn  btn-warning">แก้ไข</a></td>
-                        <td><a href="form_delete_content.php" class="btn  btn-danger">ลบ</a></td>
-                      </tr>
+                    @endforeach
                     </tbody>
                   </table>
                 </div>
