@@ -21,7 +21,7 @@
       <h1>ร้านขายของชำป้ามา</h1>
       <img src="{{asset('fontend/img/logo_pama3.png')}}" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
     </div>
-    
+
   </section>
   <!-- End Hero -->
 
@@ -33,17 +33,17 @@
     <section id="about" class="about">
       <div class="container">
 
-      <div class="row content">
+        <div class="row content">
           <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
             <img src="{{asset('fontend/img/logo_pama2.png')}}" class="img-fluid" alt="">
           </div>
-          
+
           <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
             <h2>ร้านขายของชำป้ามา</h2>
             <p class="fst-italic">
-            ร้านขายของชำป้ามา เป็นร้านที่มีสินค้าเยอะ<br>
-            เช่น อาหารกระป๋อง น้ำอัดลม ขนมขบเคี้ยว<br> 
-            สินค้าทุกอย่าจะสะอาด และราคาถูก
+              ร้านขายของชำป้ามา เป็นร้านที่มีสินค้าเยอะ<br>
+              เช่น อาหารกระป๋อง น้ำอัดลม ขนมขบเคี้ยว<br>
+              สินค้าทุกอย่าจะสะอาด และราคาถูก
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@
     <section id="features" class="features" data-aos="fade-up">
       <div class="container">
 
-       
+
 
         <div class="row content">
           <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
@@ -67,15 +67,15 @@
           <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
             <h3>ร้านขายของชำคือ</h3>
             <p>
-            ร้านขายของชำหรือร้านโชห่วย (Grocery Store)<br> 
-            เป็นร้านค้าปลีกแบบดั้งเดิมที่เก่าแก่ที่สุดมีขนาดเล็ก<br> 
-            จำหน่ายสินค้าอุปโภคบริโภคให้แก่ลูกค้าที่อาศัยอยู่<br> 
-            บริเวณใกล้เคียงกับร้านค้า ใช้เงินทุนต่ำ ใช้แรงงานภายในครอบครัวเป็นหลัก<br>  
-            ระบบการจัดการไม่มีมาตรฐาน ไม่มีการจัดทำสต๊อก หรือ ทำบัญชีสินค้า<br> 
-            จะสั่งซื้อสินค้าเพิ่มเติมเมื่อขายสินค้าหมด<br>  
-            การตั้งราคาจะกำหนดตามป้ายที่ตีพิมพ์ไว้ข้าง ห่อหรือบรรจุภัณฑ์<br>  
-            เวลาปิด-เปิดร้านไม่แน่นอน ขึ้นอยู่กับความสะดวกของเจ้าของร้าน<br> 
-            และสภาพแวดล้อมเป็นสำคัญ<br> 
+              ร้านขายของชำหรือร้านโชห่วย (Grocery Store)<br>
+              เป็นร้านค้าปลีกแบบดั้งเดิมที่เก่าแก่ที่สุดมีขนาดเล็ก<br>
+              จำหน่ายสินค้าอุปโภคบริโภคให้แก่ลูกค้าที่อาศัยอยู่<br>
+              บริเวณใกล้เคียงกับร้านค้า ใช้เงินทุนต่ำ ใช้แรงงานภายในครอบครัวเป็นหลัก<br>
+              ระบบการจัดการไม่มีมาตรฐาน ไม่มีการจัดทำสต๊อก หรือ ทำบัญชีสินค้า<br>
+              จะสั่งซื้อสินค้าเพิ่มเติมเมื่อขายสินค้าหมด<br>
+              การตั้งราคาจะกำหนดตามป้ายที่ตีพิมพ์ไว้ข้าง ห่อหรือบรรจุภัณฑ์<br>
+              เวลาปิด-เปิดร้านไม่แน่นอน ขึ้นอยู่กับความสะดวกของเจ้าของร้าน<br>
+              และสภาพแวดล้อมเป็นสำคัญ<br>
             </p>
           </div>
         </div>
@@ -174,14 +174,15 @@
         </div>
 
       </div>
-    </section>--><!-- End Clients Section -->
+    </section>-->
+    <!-- End Clients Section -->
 
 
 
     <!-- ======= Steps Section ======= -->
     <section id="steps" class="steps">
       <div class="container">
-      <div class="section-title">
+        <div class="section-title">
           <h2>สินค้าขายดี</h2>
         </div>
 
@@ -281,7 +282,8 @@
         </div>
 
       </div>
-    </section>--><!-- End Services Section -->
+    </section>-->
+    <!-- End Services Section -->
 
 
 
@@ -298,210 +300,36 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">ทั้งหมด</li>
-              <li data-filter=".filter-deli">อาหารกระป๋องอาหารสำเร็จรูป</li>
-              <li data-filter=".filter-drink">เครื่องดื่ม </li>
-              <li data-filter=".filter-household">ผลิตภัณฑ์ในครัวเรือน</li>
-              <li data-filter=".filter-food">ส่วนผสมในการปรุงอาหาร</li>
+              @foreach($types as $type)
+              <li data-filter=".filter-{{ $type->id_pt }}">{{ $type->name_manu }}</li>
+              @endforeach
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-deli">
+          @foreach($products as $product)
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $product->id_pt }}">
             <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+              <img src="{{asset('admin/images/'.$product->image)}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>{{ $product->name }}</h4>
+                <p>{{ $product->price }} บาท</p>
                 <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/portfolio-1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="{{asset('admin/images/'.$product->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ $product->name }}"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-food">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/portfolio-12.jpeg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ส่วนผสมในการปรุงอาหาร 3 </h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/portfolio-2.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-deli">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/portfolio-3.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/portfolio-3.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-household">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/portfolio-2.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ผลิตภัณฑ์ในครัวเรือน</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/portfolio-2.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         
-          <div class="col-lg-4 col-md-6 portfolio-item filter-deli">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/portfolio-6.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/portfolio-6.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-       
-
-         
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-drink">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/ishiton.webp')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>อิชิตัน</h4>
-                <p>20 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/ishiton.webp')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="อิชิตัน"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-household">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/c01-1.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ซอสหอยนางรม</h4>
-                <p>25 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/portfolio-5.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-food">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/portfolio-10.jpeg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ส่วนผสมในการปรุงอาหาร 2 </h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/portfolio-5.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-drink">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/pepsi.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>แป๊ปซี่</h4>
-                <p>25 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/pepsi.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pepsi"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-drink">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/spai.webp')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>สไปรท์</h4>
-                <p>25 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/spai.webp')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="สไปรท์"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-drink">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/b01.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>โออิชิ</h4>
-                <p>20 บาท</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/spai.webp')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="สไปรท์"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-household">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/portfolio-9.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ผลิตภัณฑ์ในครัวเรือน</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="{{asset('fontend/img/portfolio/portfolio-9.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-deli">
-            <div class="portfolio-wrap">
-              <img src="{{asset('fontend/img/portfolio/a01.jpg')}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>ปลากระป๋อง </h4>
-                <p>13 บาท </p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
 
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+    <!-- End Portfolio Section -->
 
 
 
@@ -529,9 +357,9 @@
                 <h4>Ceo &amp; Founder</h4>
               </div>
             </div>-->
-            <!-- End testimonial item -->
+    <!-- End testimonial item -->
 
-            <!--<div class="swiper-slide">
+    <!--<div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -542,9 +370,10 @@
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
               </div>
-            </div>--><!-- End testimonial item -->
+            </div>-->
+    <!-- End testimonial item -->
 
-            <!--<div class="swiper-slide">
+    <!--<div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -555,9 +384,10 @@
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
               </div>
-            </div>--><!-- End testimonial item -->
+            </div>-->
+    <!-- End testimonial item -->
 
-            <!--<div class="swiper-slide">
+    <!--<div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -568,9 +398,10 @@
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
               </div>
-            </div>--><!-- End testimonial item -->
+            </div>-->
+    <!-- End testimonial item -->
 
-            <!--<div class="swiper-slide">
+    <!--<div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -581,56 +412,57 @@
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
               </div>
-            </div>--><!-- End testimonial item -->
+            </div>-->
+    <!-- End testimonial item -->
 
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    </div>
 
-      </div>
-    </section>-->  <!-- End Testimonials Section -->
+    </div>
+    </section>
+    <!-- End Testimonials Section -->
 
 
 
- <!-- ======= Contact Section ======= -->
+    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container" data-aos="fade-up">
 
-      <div class="section-title">
+        <div class="section-title">
           <h2>ช่องทางการติดต่อ</h2>
         </div>
-          <div class="row">
+        <div class="row">
 
           <div class="col-md-6">
             <div class="info-box mt-4">
-            <i class='bx bxs-watch'></i>
-                <h3>วันเวลาเปิดปิด</h3>
-                  <p>จันทร์ - ศุกร์  06:00 - 22:00<br>
-                  เสาร์ - อาทิตย์  10:00 - 22:00</p>
-              </div>
-           </div>
-     
+              <i class='bx bxs-watch'></i>
+              <h3>วันเวลาเปิดปิด</h3>
+              <p>จันทร์ - ศุกร์ 06:00 - 22:00<br>
+                เสาร์ - อาทิตย์ 10:00 - 22:00</p>
+            </div>
+          </div>
+
           <div class="col-md-6">
             <div class="info-box mt-4">
               <i class="bx bx-phone-call"></i>
-                <h3>เบอร์โทรศัพท์</h3>
-                <p>Phone 065-868-4878<br>
-                   Phone 098-594-1660</p>
+              <h3>เบอร์โทรศัพท์</h3>
+              <p>Phone 065-868-4878<br>
+                Phone 098-594-1660</p>
             </div>
           </div>
 
           <div class="col-md-12">
             <div class="info-box mt-4">
               <i class="bx bx-map"></i>
-                <h3>ที่อยู่</h3>
-                <p>124 ซ.นนทบุรี 33 ถ.สนามบินน้ำ<br>  
-                  ต.ท่าทราย อ.เมือง จ.นนทบุรี 11000</p>
+              <h3>ที่อยู่</h3>
+              <p>124 ซ.นนทบุรี 33 ถ.สนามบินน้ำ<br>
+                ต.ท่าทราย อ.เมือง จ.นนทบุรี 11000</p>
             </div>
           </div>
 
           <div id="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6514.012516136118!2d100.49226692401672!3d13.883694159545481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e284dbb29a6a21%3A0x1fce3f46f4507d7c!2zMTI0IOC4i-C4reC4oiDguJnguJnguJfguJrguLjguKPguLUgMzMg4LiX4LmI4Liy4LiX4Lij4Liy4LiiIOC4reC4s-C5gOC4oOC4reC5gOC4oeC4t-C4reC4h-C4meC4meC4l-C4muC4uOC4o-C4tSDguJnguJnguJfguJrguLjguKPguLUgMTEwMDA!5e0!3m2!1sth!2sth!4v1629565696657!5m2!1sth!2sth" 
-            width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6514.012516136118!2d100.49226692401672!3d13.883694159545481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e284dbb29a6a21%3A0x1fce3f46f4507d7c!2zMTI0IOC4i-C4reC4oiDguJnguJnguJfguJrguLjguKPguLUgMzMg4LiX4LmI4Liy4LiX4Lij4Liy4LiiIOC4reC4s-C5gOC4oOC4reC5gOC4oeC4t-C4reC4h-C4meC4meC4l-C4muC4uOC4o-C4tSDguJnguJnguJfguJrguLjguKPguLUgMTEwMDA!5e0!3m2!1sth!2sth!4v1629565696657!5m2!1sth!2sth" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
           </div>
 
         </div>
@@ -647,17 +479,19 @@
           <h2>เกี่ยวกับ</h2>
 
           <img src="{{asset('fontend/img/logo_pamae.png')}}" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="">
-          
-          <p><h4>ร้านขายของชำป้ามา<br>เป็นร้านที่บริการลูกค้ามาอย่างต่อเนื่อง และสินค้าหน้าร้านมีราคาที่ถูก 
-          และ คุณภาพดีความพิถีพิถันในการเลืกสินค้าทำให้สินค้าออกมาใหม่ สะอาดแน่นอน ขอบคุณครับ</h4></p>
+
+          <p>
+          <h4>ร้านขายของชำป้ามา<br>เป็นร้านที่บริการลูกค้ามาอย่างต่อเนื่อง และสินค้าหน้าร้านมีราคาที่ถูก
+            และ คุณภาพดีความพิถีพิถันในการเลืกสินค้าทำให้สินค้าออกมาใหม่ สะอาดแน่นอน ขอบคุณครับ</h4>
+          </p>
         </div>
-          
+
 
         <div class="row">
 
-        <div class="section-title">
-          <h2>ผู้จัดทำ</h2>
-        </div>
+          <div class="section-title">
+            <h2>ผู้จัดทำ</h2>
+          </div>
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
@@ -713,7 +547,7 @@
             </div>
           </div>
 
-          
+
 
         </div>
 
@@ -787,7 +621,8 @@
         </div>
 
       </div>
-    </section>--><!-- End Pricing Section -->
+    </section>-->
+    <!-- End Pricing Section -->
 
 
 
@@ -795,14 +630,14 @@
     <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
 
-       
+
         <ul class="faq-list">
 
           <li>
             <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">อาหารกระป๋องอาหารสำเร็จรูป<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p>
-              เช่น ปลากระป๋อง ทูน่ากระป๋อง บะหมี่กึ่งสำเร็จรูป โจ็กคัพ เป็นต้น  
+                เช่น ปลากระป๋อง ทูน่ากระป๋อง บะหมี่กึ่งสำเร็จรูป โจ็กคัพ เป็นต้น
               </p>
             </div>
           </li>
@@ -811,16 +646,16 @@
             <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">เครื่องดื่ม<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p>
-              เช่น น้ำอัดลม น้ำเปล่า เครื่องดื่มชูกำลัง นมเปรี้ยว
+                เช่น น้ำอัดลม น้ำเปล่า เครื่องดื่มชูกำลัง นมเปรี้ยว
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">ผลิตภัณฑ์ในครัว<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">ของใช้ประจำวัน<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
               <p>
-              เช่น น้ำยาล้างจาน น้ำยาถูพื้น ผงซักฟอก
+                เช่น น้ำยาล้างจาน แป้ง สบู่
               </p>
             </div>
           </li>
@@ -829,7 +664,7 @@
             <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">ส่วนผสมในการปรุงอาหาร<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
               <p>
-              เช่น น้ำปลา น้ำตาล เกลือ น้ำมันพืช พริกป่น ซอสถั่วเหลือง
+                เช่น น้ำปลา น้ำตาล เกลือ น้ำมันพืช พริกป่น ซอสถั่วเหลือง
               </p>
             </div>
           </li>
@@ -838,7 +673,7 @@
 
       </div>
     </section><!-- End Frequently Asked Questions Section -->
-   
+
   </main><!-- End #main -->
 
 
