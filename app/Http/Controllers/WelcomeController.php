@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Type_product;
+use App\Content;
+use App\background;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -14,6 +16,10 @@ class WelcomeController extends Controller
 
         $products = Product::all();
 
-        return view('welcome', compact('types', 'products'));
+        $contents = content::all();
+
+        $backgrounds = background::all();
+
+        return view('welcome', compact('types', 'products' ,'contents','backgrounds'));
     }
 }

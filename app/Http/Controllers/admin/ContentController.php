@@ -22,10 +22,15 @@ class ContentController extends Controller
     public function createcontent(Request $request){
         $validateData = $request->validate(
             [
+                'name' => 'required',
+                'price' => 'required|numeric',
                 'id_admin' => 'required',               
                 'image' => 'mimes:jpeg,jpg,png,gif|file|max:12040',
             ],
             [
+                'name.required' => 'กรุณาป้อนชื่อสินค้า',
+                'price.required' => 'กรุณาป้อนราคาสินค้า',
+                'price.numeric' => 'ป้อนได้เฉพาะตัวเลขเท่านั้น',
                 'id_admin.required' => 'กรุณาป้อนผู้สร้างสินค้า',
                 'image.mimes' => 'กรุณาอัพโหลดภาพนามสกุล jpeg,jpg,png,gif เท่านั้น',
                 'image.file' => 'อัพโหลดได้เฉพาะไฟล์ภาพ',
@@ -34,6 +39,8 @@ class ContentController extends Controller
             ]
         );
         $content = new Content();
+        $content->name = $request->name;
+        $content->price = $request->price;
         $content->id_admin = $request->id_admin;
 
         if ($request->hasFile('image')) {
@@ -46,7 +53,7 @@ class ContentController extends Controller
         }
 
         $content->save();
-        return redirect()->route('content.index');
+        return redirect()->route('content.index')->with('success','บันทึกข้อมูลเรียบร้อบแล้ว');
 
     }
     public function editcontent($id){
@@ -57,10 +64,15 @@ class ContentController extends Controller
     public function updatecontent(Request $request, $id){
         $validateData = $request->validate(
             [
+                'name' => 'required',
+                'price' => 'required|numeric',
                 'id_admin' => 'required',               
                 'image' => 'mimes:jpeg,jpg,png,gif|file|max:12040',
             ],
             [
+                'name.required' => 'กรุณาป้อนชื่อสินค้า',
+                'price.required' => 'กรุณาป้อนราคาสินค้า',
+                'price.numeric' => 'ป้อนได้เฉพาะตัวเลขเท่านั้น',
                 'id_admin.required' => 'กรุณาป้อนผู้สร้างสินค้า',
                 'image.mimes' => 'กรุณาอัพโหลดภาพนามสกุล jpeg,jpg,png,gif เท่านั้น',
                 'image.file' => 'อัพโหลดได้เฉพาะไฟล์ภาพ',
@@ -77,14 +89,18 @@ class ContentController extends Controller
             $request->file('image')->move(public_path() . '/admin/imagecontent/', $filename);
             Image::make(public_path() . '/admin/imagecontent/' . $filename);
             $content->image = $filename;
+            $content->name = $request->name;
+            $content->price = $request->price;
             $content->id_admin = $request->id_admin;
         } else {
             $content = Content::find($id);
+            $content->name = $request->name;
+            $content->price = $request->price;
             $content->id_admin = $request->id_admin;
         }
 
         $content->save();
-        return redirect()->route('content.index');
+        return redirect()->route('content.index')->with('update','แก้ไขข้อมูลเรียบร้อบแล้ว');
         
     }
     public function deletecontent($id){
@@ -93,7 +109,7 @@ class ContentController extends Controller
             File::delete(public_path() . '/admin/imagecontent/' . $deletecontent->image);
         }
         $deletecontent->delete();
-        return redirect()->route('content.index');
+        return redirect()->route('content.index')->with('delet','ลบข้อมูลเรียบร้อบแล้ว');
     }
         
 }

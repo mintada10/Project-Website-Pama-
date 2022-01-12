@@ -1,7 +1,41 @@
 @include ('layouts.admin.head')
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <body id="page-top">
   <div id="wrapper">
+  @if (session('success'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'บันทึกข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+        @if (session('update'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'แก้ไขข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+
+        @if (session('delet'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'ลบข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif  
     <!-- Sidebar -->
     @include ('layouts.admin.sidebar')
     <!-- Sidebar -->
@@ -36,6 +70,8 @@
                       <tr>
                         <th>ID</th>
                         <th>รูปภาพ</th>
+                        <th>ชื่อ</th>
+                        <th>ราคา</th>
                         <th>ผู้สร้างเนื้อหา</th>
                         <th>แก้ไข</th>
                         <th>ลบ</th>
@@ -48,6 +84,8 @@
                         <td>
                           <img src="{{asset('admin/imagecontent/'.$contents->image)}}" alt="" style="width:100px">
                         </td>
+                        <td>{{$contents->name}}</td>
+                        <td>{{number_format($contents->price)}} บาท </td>                   
                         <td>{{$contents->admin->name}}</td>                       
                         <td><a href="{{url('admin/content/editcontent/'.$contents->id_content)}}" class="btn  btn-warning"><i class="fas fa-edit"></i></a></td>
                         <td><a href="{{url('admin/content/deletecontent/'.$contents->id_content)}}" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></a></td>

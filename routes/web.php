@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'WelcomeController@index');
 
-
-
 //Adminpage
 Route::get('/index','Admin\AdminpageController@index')->name('index');
 

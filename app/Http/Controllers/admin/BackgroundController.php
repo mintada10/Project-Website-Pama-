@@ -54,7 +54,7 @@ class BackgroundController extends Controller
         }
 
         $background->save();
-        return redirect()->route('background.index');
+        return redirect()->route('background.index')->with('success','บันทึกข้อมูลเรียบร้อบแล้ว');
     }
     public function editbackground($id)
     {
@@ -97,7 +97,7 @@ class BackgroundController extends Controller
         }
 
         $background->save();
-        return redirect()->route('background.index');
+        return redirect()->route('background.index')->with('update','แก้ไขข้อมูลเรียบร้อบแล้ว');
     }
     public function deletebackground($id){
         $deletebackground = Background::find($id);
@@ -105,7 +105,7 @@ class BackgroundController extends Controller
             File::delete(public_path() . '/admin/imagebackground/' . $deletebackground->image);
         }
         $deletebackground->delete();
-        return redirect()->route('background.index');
+        return redirect()->route('background.index')->with('delet','ลบข้อมูลเรียบร้อบแล้ว');
 
     }
 }

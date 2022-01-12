@@ -17,7 +17,7 @@
                     <p><strong>Name :</strong> {{ Auth::user()->name }}</p>
                     <p><strong>Email :</strong> {{ Auth::user()->email }}</p>
                     <a href="{{route('index')}}" class="btn btn-primary">Product Manegment</a>
-                    <a href="http://localhost/project%20pama/" class="btn btn-success">Home</a>
+                    <a href="{{url('/')}}" class="btn btn-success">Home</a>
                 </div>
             </div>
         </div>

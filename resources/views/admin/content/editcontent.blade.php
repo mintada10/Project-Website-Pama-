@@ -65,6 +65,26 @@
                     </div>
                     -->
 
+                    <div class="form-group" >
+                      <label for="name">ชื่อ</label>
+                      <input type="text" class="form-control" id="name" name="name" value="{{$editcontent->name}}">
+                      <div class="row mt-3">
+                            @error('name')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="price">ราคา</label>
+                      <input type="text" class="form-control" id="price" name="price" value="{{$editcontent->price}}">    
+                      <div class="row mt-3">
+                            @error('price')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>                
+                    </div>
+
                     <div class="form-group">
                         <label>ผู้สร้างเนื้อหา</label>
                         <select class="form-control" name="id_admin" >

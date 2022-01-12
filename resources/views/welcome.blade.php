@@ -62,7 +62,9 @@
 
         <div class="row content">
           <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
-            <img src="{{asset('fontend/img/idea2.jpg')}}  " class="img-fluid" alt="">
+          @foreach($backgrounds as $background)
+            <img src="{{asset('/admin/imagebackground/' . $background->image)}}" class="img-fluid" alt="">
+            @endforeach
           </div>
           <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
             <h3>ร้านขายของชำคือ</h3>
@@ -188,47 +190,16 @@
 
         <div class="row no-gutters" data-aos="fade-up">
 
+        @foreach($contents as $content)
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-            <span>01</span>
-            <img src="{{asset('fontend/img/clients/logo.jpg')}}" class="img-fluid" alt="">
-            <h4>pepsi</h4>
-            <p>25 บาท</p>
+            
+            <img src="{{asset('/admin/imagecontent/' . $content->image)}}" class="img-fluid" alt="" style="width:250px">
+            <h4>{{ $content->name }}</h4>
+            <p>{{ $content->price }} บาท</p>
           </div>
+          @endforeach
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-            <span>02</span>
-            <img src="{{asset('fontend/img/clients/logo.jpg')}}" class="img-fluid" alt="">
-            <h4>เลย์ รสโนริสาหร่าย</h4>
-            <p>25 บาท</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
-            <span>03</span>
-            <img src="{{asset('fontend/img/clients/logo.jpg')}}" class="img-fluid" alt="">
-            <h4>ปลากระป๋อง</h4>
-            <p>14 บาท</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-            <span>04</span>
-            <img src="{{asset('fontend/img/clients/logo.jpg')}}" class="img-fluid" alt="">
-            <h4>บะหมี่กึ่งสำเร็จรูป</h4>
-            <p>6 บาท</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-            <span>05</span>
-            <img src="{{asset('fontend/img/clients/logo.jpg')}}" class="img-fluid" alt="">
-            <h4>น้ำปลา</h4>
-            <p>25 บาท</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
-            <span>06</span>
-            <img src="{{asset('fontend/img/clients/logo.jpg')}}" class="img-fluid" alt="">
-            <h4>โจ็กคัพ</h4>
-            <p>15 บาท</p>
-          </div>
+          
 
         </div>
 
@@ -517,7 +488,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Thanakorn Kaytang</h4>
-                  <span>Back End</span>
+                  <span>Font End</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -535,7 +506,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Mintada Monta</h4>
-                  <span>Font End</span>
+                  <span>Back End</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
