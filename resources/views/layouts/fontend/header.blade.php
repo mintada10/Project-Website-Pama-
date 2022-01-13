@@ -8,7 +8,7 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-      
+
         <li><a class="nav-link scrollto active" href="#hero">หน้าแรก</a></li>
         <li><a class="nav-link scrollto " href="#portfolio">สินค้า</a></li>
         <li><a class="nav-link scrollto" href="#contact">ช่องทางการติดต่อ</a></li>
@@ -16,7 +16,7 @@
       @if (Auth::check())
       <li><a class="getstarted scrollto"href="{{route('home')}}">Account</a></li>
         <li><a class="getstarted scrollto" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">ออกสู่ระบบ</a></li>
+                                                     document.getElementById('logout-form').submit();">ออกจากระบบ</a></li>
       @else
         <li><a class="getstarted scrollto" href="{{route('login')}}">เข้าสู่ระบบ</a></li>
       @endif

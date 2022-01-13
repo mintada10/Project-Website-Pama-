@@ -1,7 +1,41 @@
 @include ('layouts.admin.head')
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <body id="page-top">
   <div id="wrapper">
+  @if (session('success'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'บันทึกข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+        @if (session('update'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'แก้ไขข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif
+
+        @if (session('delet'))
+        <script>
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'ลบข้อมูลเรียบร้อบแล้ว',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        </script>
+        @endif  
     <!-- Sidebar -->
     @include ('layouts.admin.sidebar')
     <!-- Sidebar -->

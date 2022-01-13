@@ -60,7 +60,7 @@ class HomepageController extends Controller
         }
 
         $homepage->save();
-        return redirect()->route('homepage.index');
+        return redirect()->route('homepage.index')->with('success','บันทึกข้อมูลเรียบร้อบแล้ว');
     }
     public function edithomepage($id){
         $edithomepage = homepage::find($id);
@@ -120,7 +120,7 @@ class HomepageController extends Controller
         }
 
         $homepage->save();
-        return redirect()->route('homepage.index');
+        return redirect()->route('homepage.index')->with('update','แก้ไขข้อมูลเรียบร้อบแล้ว');
         
     }
     public function deletehomepage($id){
@@ -129,7 +129,7 @@ class HomepageController extends Controller
             File::delete(public_path() . '/admin/imagehomepage/' . $deletehomepage->image_bg);
         }
         $deletehomepage->delete();
-        return redirect()->route('homepage.index');
+        return redirect()->route('homepage.index')->with('delet','ลบข้อมูลเรียบร้อบแล้ว');
 
     }
 
