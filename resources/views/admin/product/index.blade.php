@@ -66,7 +66,7 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">หน้า Product</h6> <a href="{{route('addproduct')}}" class="btn btn-success">เพิ่มข้อมูล</a>
                 </div>
-                
+
                 <div class="table-responsive">
                   <table class="table align-items-center table-flush">
                     <thead class="thead-light">
@@ -95,14 +95,14 @@
                         <td>{{$products->admin->name}}</td>
                         <td>{{$products->typeproduct->name_manu}}</td>
 
-                                              
+
                         <td><a href="{{url('admin/product/editproduct/'.$products->id_product)}}" class="btn  btn-warning"><i class="fas fa-edit"></i></a></td>
                         <td><a href="{{url('admin/product/deleteproduct/'.$products->id_product)}}" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></a></td>
                       </tr>
 
                     @endforeach
-                      
-                      
+
+
                     </tbody>
                   </table>
                 </div>
@@ -137,7 +137,7 @@
         <!---Container Fluid-->
       </div>
       <!-- Footer -->
-    
+
 @include ('layouts.admin.footer')
       <!-- Footer -->
     </div>
@@ -148,7 +148,7 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
- 
+
 </body>
 
 </html>

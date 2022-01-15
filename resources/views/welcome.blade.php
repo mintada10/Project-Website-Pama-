@@ -192,14 +192,14 @@
 
         @foreach($contents as $content)
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-            
+
             <img src="{{asset('/admin/imagecontent/' . $content->image)}}" class="img-fluid" alt="" style="width:250px">
             <h4>{{ $content->name }}</h4>
             <p>{{ $content->price }} บาท</p>
           </div>
           @endforeach
 
-          
+
 
         </div>
 
@@ -232,7 +232,7 @@
               <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
-          </div> 
+          </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box">
@@ -283,7 +283,7 @@
           @foreach($products as $product)
           <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $product->id_pt }}">
             <div class="portfolio-wrap">
-              <img src="{{asset('admin/images/'.$product->image)}}" class="img-fluid" alt="">
+              <img src="{{asset('admin/images/'.$product->image)}}" class="img-fluid" alt="" >
               <div class="portfolio-info">
                 <h4>{{ $product->name }}</h4>
                 <p>{{ $product->price }} บาท</p>
@@ -466,7 +466,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="{{asset('fontend/img/team/tester.jpg')}}" class="img-fluid" alt="">
+              <img src="{{asset('fontend/img/team/tester.jpg')}}" class="img-fluid" alt="" >
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Sahayod Boonyoo</h4>

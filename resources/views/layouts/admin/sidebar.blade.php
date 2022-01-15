@@ -13,7 +13,7 @@
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
-        Features
+        menu
       </div>
       <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
@@ -61,8 +61,8 @@
           </div>
         </div>
       </li> -->
-     
-      
+
+
       <li class="nav-item">
         <a class="nav-link" href="{{route('admin.index')}}">
         <i class="fas fa-fw fa-user"></i>

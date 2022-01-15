@@ -27,7 +27,7 @@ class HomepageController extends Controller
                 'product_name' => 'required',
                 'price' => 'required|numeric',
                 'id_admin' => 'required',
-                
+
                 'image_bg' => 'mimes:jpeg,jpg,png,gif|file|max:12040',
             ],
             [
@@ -66,8 +66,8 @@ class HomepageController extends Controller
         $edithomepage = homepage::find($id);
         return view('admin.homepage.edithomepage', compact('edithomepage'))
         ->with('admins',Admin::all());
-        
-        
+
+
     }
     public function updatehomepage(Request $request, $id){
         $validateData = $request->validate(
@@ -77,7 +77,7 @@ class HomepageController extends Controller
                 'product_name' => 'required',
                 'price' => 'required|numeric',
                 'id_admin' => 'required',
-                
+
                 'image_bg' => 'mimes:jpeg,jpg,png,gif|file|max:12040',
             ],
             [
@@ -93,8 +93,8 @@ class HomepageController extends Controller
 
             ]
         );
-        
-       
+
+
 
         if ($request->hasFile('image_bg')) {
             $homepage = Homepage::find($id);
@@ -121,7 +121,7 @@ class HomepageController extends Controller
 
         $homepage->save();
         return redirect()->route('homepage.index')->with('update','แก้ไขข้อมูลเรียบร้อบแล้ว');
-        
+
     }
     public function deletehomepage($id){
         $deletehomepage = Homepage::find($id);
